@@ -5,11 +5,11 @@ using TMPro;
 using HutongGames.PlayMaker;
 using UnityEngine;
 
-public class TMPUpdater : MonoBehaviour
+public class SetTextTMP : MonoBehaviour
 {
 
-    public TextMeshProUGUI mainText;
-    public string FsmGlobalVar = "";
+    public TextMeshProUGUI textObject;
+    public string FsmGlobalString = "";
     string checkText = "";
     string compareText = "";
     string setText = "";
@@ -17,18 +17,18 @@ public class TMPUpdater : MonoBehaviour
     // Initial setting of string "checkText"
     void Start()
     {
-        checkText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalVar).Value;
+        checkText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalString).Value;
     }
 
     // Checks if selected Fsm Global Variable has changed
     void Update()
     {
-        compareText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalVar).Value;
+        compareText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalString).Value;
 
         if (compareText != checkText)
         {
-            setText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalVar).Value;
-            checkText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalVar).Value;
+            setText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalString).Value;
+            checkText = FsmVariables.GlobalVariables.FindFsmString(FsmGlobalString).Value;
             TMPUpdate();
          }
     }
@@ -36,6 +36,6 @@ public class TMPUpdater : MonoBehaviour
     // Call to update text to contents of string "setText"
     void TMPUpdate()
     {
-        mainText.text = setText;
+        textObject.text = setText;
     }
 }

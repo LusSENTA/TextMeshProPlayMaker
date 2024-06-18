@@ -1,0 +1,30 @@
+// Developed by Lus SENTA (2024). Licensed under MIT License
+using TMPro;
+using HutongGames.PlayMaker;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace HutongGames.PlayMaker.Actions
+{
+
+	[ActionCategory("TextMeshPro")]
+	public class SetTextTMP : FsmStateAction
+	{
+
+        public TextMeshProUGUI textObject;
+
+        [UIHint(UIHint.TextArea)]
+        [Tooltip("The text of the TextMeshPro object.")]
+        public string setText = "";
+
+        // Set TextMeshPro object to entered text
+        public override void OnEnter()
+		{
+            textObject.text = setText;
+            Finish();
+		}
+
+
+	}
+
+}

@@ -5,14 +5,14 @@ using TMPro;
 using HutongGames.PlayMaker;
 using UnityEngine;
 
-public class SetTextTMP : MonoBehaviour
+public class SetTextTMPCS : MonoBehaviour
 {
 
     public TextMeshProUGUI textObject;
-    public string FsmGlobalString = "";
-    string checkText = "";
-    string compareText = "";
-    string setText = "";
+    public string FsmGlobalString;
+    string checkText;
+    string compareText;
+    string setText;
 
     // Initial setting of string "checkText"
     void Start()

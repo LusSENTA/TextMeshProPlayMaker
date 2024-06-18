@@ -8,7 +8,8 @@ namespace HutongGames.PlayMaker.Actions
 {
 
 	[ActionCategory("TextMeshPro")]
-	public class SetTextTMP : FsmStateAction
+    [Tooltip("Set Text of a TextMeshPro object.")]
+    public class SetTextTMP : FsmStateAction
 	{
         [RequiredField]
         [Tooltip("The TextMeshPro object you want to change.")]

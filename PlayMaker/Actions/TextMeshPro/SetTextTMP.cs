@@ -11,10 +11,13 @@ namespace HutongGames.PlayMaker.Actions
     [Tooltip("Set Text of a TextMeshPro object.")]
     public class SetTextTMP : FsmStateAction
 	{
+
+        // Get TextMeshPro object
         [RequiredField]
         [Tooltip("The TextMeshPro object you want to change.")]
         public TextMeshProUGUI textObject;
 
+        // Get text
         [UIHint(UIHint.TextArea)]
         [Tooltip("The text of the TextMeshPro object.")]
         public string setText;

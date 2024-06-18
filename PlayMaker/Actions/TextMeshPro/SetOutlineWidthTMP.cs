@@ -1,3 +1,4 @@
+// Developed by Lus SENTA (2024). Licensed under MIT License
 using TMPro;
 using UnityEngine;
 
@@ -9,14 +10,16 @@ namespace HutongGames.PlayMaker.Actions
 	public class SetOutlineWidthTMP : FsmStateAction
 	{
 
+        // Get TextMeshPro object
         [RequiredField]
         [Tooltip("The TextMeshPro object you want to change.")]
         public TextMeshProUGUI textObject;
 
+		// Get width as float
         [Tooltip("The Outline Width of the TextMeshPro object.")]
         public float outlineWidth;
 
-        // Code that runs on entering the state.
+        // Set TextMeshPro object Outline Width
         public override void OnEnter()
 		{
 			textObject.outlineWidth = outlineWidth;

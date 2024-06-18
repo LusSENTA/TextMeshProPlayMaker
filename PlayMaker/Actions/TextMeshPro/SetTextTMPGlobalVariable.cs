@@ -11,10 +11,12 @@ namespace HutongGames.PlayMaker.Actions
     [Tooltip("Set Text of a TextMeshPro object from a Global Variable.")]
     public class SetTextTMPGlobalVariable : FsmStateAction
 	{
+        // Get TextMeshPro object
         [RequiredField]
         [Tooltip("The TextMeshPro object you want to change.")]
         public TextMeshProUGUI textObject;
 
+        // Get Global Variable
         [RequiredField]
         [Tooltip("The String Variable used to set TextMeshPro objext.")]
         public string FsmGlobalString;

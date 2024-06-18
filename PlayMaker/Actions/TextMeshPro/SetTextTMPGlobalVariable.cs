@@ -10,7 +10,8 @@ namespace HutongGames.PlayMaker.Actions
 	[ActionCategory("TextMeshPro")]
 	public class SetTextTMPGlobalVariable : FsmStateAction
 	{
-
+        [RequiredField]
+        [Tooltip("The TextMeshPro object you want to change.")]
         public TextMeshProUGUI textObject;
 
         [RequiredField]

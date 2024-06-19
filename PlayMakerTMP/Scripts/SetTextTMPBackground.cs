@@ -5,7 +5,7 @@ using TMPro;
 using HutongGames.PlayMaker;
 using UnityEngine;
 
-public class SetTextTMPCS : MonoBehaviour
+public class SetTextTMPBackground : MonoBehaviour
 {
 
     public TextMeshProUGUI textObject;

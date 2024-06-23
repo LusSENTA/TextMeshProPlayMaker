@@ -7,4 +7,4 @@ See [Wiki](https://github.com/LusSENTA/TextMeshProPlaymaker/wiki) for Documentat
 
 ## Download
 
-Download Unity Package [here](https://github.com/LusSENTA/TextMeshProPlayMaker/releases/latest)
+Download Unity Package [here](https://github.com/LusSENTA/TextMeshProPlayMaker/releases/latest).

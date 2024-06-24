@@ -17,10 +17,10 @@ namespace HutongGames.PlayMaker.Actions
         [Tooltip("The TextMeshPro object you want to change.")]
         public TextMeshProUGUI textObject;
 
-        // Get text
+        // Get text or variable
         [UIHint(UIHint.TextArea)]
         [Tooltip("The text of the TextMeshPro object.")]
-        public string setText;
+        public FsmString Text;
 
         // Set color Y/N
         public bool color;
@@ -35,8 +35,8 @@ namespace HutongGames.PlayMaker.Actions
         // Set TextMeshPro object to entered text
         public override void OnEnter()
 		{
+            string setText = Text.Value;
             textObject.text = setText;
-            Finish();
 
             if (color)
             {
@@ -49,6 +49,7 @@ namespace HutongGames.PlayMaker.Actions
                 Finish();
 
             }
+            Finish();
         }
 
 

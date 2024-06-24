@@ -17,14 +17,19 @@ namespace HutongGames.PlayMaker.Actions
 
         // Get RGBA values
         [Tooltip("The Outline Color of the TextMeshPro object.")]
-        public int outlineColorRed;
-        public int outlineColorGreen;
-        public int outlineColorBlue;
-        public int outlineColorAlpha;
+        public FsmInt red;
+        public FsmInt green;
+        public FsmInt blue;
+        public FsmInt alpha;
 
         // Code that runs on entering the state.
         public override void OnEnter()
 		{
+            // Convert Fsm Vaiables to Standard Variables
+            int outlineColorRed = red.Value;
+            int outlineColorGreen = green.Value;
+            int outlineColorBlue = blue.Value;
+            int outlineColorAlpha = alpha.Value;
 
             // Convert Int to Byte
             byte bColor1 = (byte)outlineColorRed;

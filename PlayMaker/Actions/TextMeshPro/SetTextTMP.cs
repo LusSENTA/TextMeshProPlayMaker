@@ -23,22 +23,29 @@ namespace HutongGames.PlayMaker.Actions
         public FsmString Text;
 
         // Set color Y/N
-        public bool color;
+        [Tooltip("When enabled text color will be set.")]
+        public bool setColor;
 
         // Get RGBA values
         [Tooltip("The Face Color of the TextMeshPro object.")]
-        public int textColorRed;
-        public int textColorGreen;
-        public int textColorBlue;
-        public int textColorAlpha;
+        public FsmInt red;
+        public FsmInt green;
+        public FsmInt blue;
+        public FsmInt alpha;
 
         // Set TextMeshPro object to entered text
         public override void OnEnter()
 		{
+            // Convert Fsm Vaiables to Standard Variables
             string setText = Text.Value;
+            int textColorRed = red.Value;
+            int textColorGreen = green.Value;
+            int textColorBlue = blue.Value;
+            int textColorAlpha = alpha.Value;
+
             textObject.text = setText;
 
-            if (color)
+            if (setColor)
             {
                 byte bColor1 = (byte)textColorRed;
                 byte bColor2 = (byte)textColorGreen;
@@ -46,9 +53,9 @@ namespace HutongGames.PlayMaker.Actions
                 byte bColor4 = (byte)textColorAlpha;
 
                 textObject.color = new Color32(bColor1, bColor2, bColor3, bColor4);
-                Finish();
 
             }
+
             Finish();
         }
 

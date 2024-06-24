@@ -17,14 +17,20 @@ namespace HutongGames.PlayMaker.Actions
 
         // Get RGBA values
         [Tooltip("The Color of the TextMeshPro object.")]
-        public int textColorRed;
-        public int textColorGreen;
-        public int textColorBlue;
-        public int textColorAlpha;
+        public FsmInt red;
+        public FsmInt green;
+        public FsmInt blue;
+        public FsmInt alpha;
 
         // Code that runs on entering the state.
         public override void OnEnter()
 		{
+            // Convert Fsm Vaiables to Standard Variables
+            int textColorRed = red.Value;
+            int textColorGreen = green.Value;
+            int textColorBlue = blue.Value;
+            int textColorAlpha = alpha.Value;
+
             // Convert Int to Byte
             byte bColor1 = (byte)textColorRed;
             byte bColor2 = (byte)textColorGreen;

@@ -16,13 +16,14 @@ namespace HutongGames.PlayMaker.Actions
         public TextMeshProUGUI textObject;
 
 		// Get width as float
-        [Tooltip("The Outline Width of the TextMeshPro object.")]
-        public float outlineWidth;
+		[Tooltip("The Outline Width of the TextMeshPro object.")]
+		public FsmFloat outlineWidth;
 
         // Set TextMeshPro object Outline Width
         public override void OnEnter()
 		{
-			textObject.outlineWidth = outlineWidth;
+			float width = outlineWidth.Value;
+			textObject.outlineWidth = width;
 			Finish();
 		}
 
